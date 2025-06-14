@@ -1,3 +1,6 @@
+import React from 'react';
+import Projects from './components/Projects'; // ✅ Import the component
+
 function App() {
   return (
     <div className="font-sans">
@@ -20,11 +23,16 @@ function App() {
           <p className="text-lg text-gray-600 mb-6">
             A passionate Electrical Engineering student focused on processor engineering, embedded systems, and intelligent design.
           </p>
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-xl text-md font-medium hover:bg-blue-700 transition">
-            View My Projects
-          </button>
+          <a href="#projects">
+            <button className="px-6 py-3 bg-blue-600 text-white rounded-xl text-md font-medium hover:bg-blue-700 transition">
+              View My Projects
+            </button>
+          </a>
         </div>
       </main>
+
+      {/* Projects Section */}
+      <Projects />
     </div>
   );
 }
