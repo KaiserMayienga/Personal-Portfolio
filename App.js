@@ -1,5 +1,6 @@
 import React from 'react';
-import Projects from './components/Projects'; // ✅ Import the component
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -8,9 +9,15 @@ function App() {
       <nav className="bg-white shadow-md py-4 px-8 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-blue-700">Caesar Mayienga</h1>
         <ul className="flex space-x-6 text-gray-700 font-medium">
-          <li className="hover:text-blue-600 cursor-pointer">Home</li>
-          <li className="hover:text-blue-600 cursor-pointer">Projects</li>
-          <li className="hover:text-blue-600 cursor-pointer">Contact</li>
+          <li className="hover:text-blue-600 cursor-pointer">
+            <a href="#">Home</a>
+          </li>
+          <li className="hover:text-blue-600 cursor-pointer">
+            <a href="#projects">Projects</a>
+          </li>
+          <li className="hover:text-blue-600 cursor-pointer">
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </nav>
 
@@ -32,7 +39,12 @@ function App() {
       </main>
 
       {/* Projects Section */}
-      <Projects />
+      <section id="projects">
+        <Projects />
+      </section>
+
+      {/* Contact Section */}
+      <Contact />
     </div>
   );
 }
